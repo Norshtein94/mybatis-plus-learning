@@ -58,7 +58,7 @@ class MapperTests {
         // 1、查询用户信息
         StudentModel user = studentMapper.selectById(1L);
         // 2、修改用户信息
-        user.setName("kwhua");
+        user.setName("abc");
         user.setEmail("123456@qq.com");
         // 3、执行更新操作
         studentMapper.updateById(user);
@@ -70,12 +70,12 @@ class MapperTests {
 
         // 线程 1
         StudentModel user = studentMapper.selectById(1L);
-        user.setName("kwhua111");
+        user.setName("abc111");
         user.setEmail("123456@qq.com");
 
         // 模拟另外一个线程执行了插队操作
         StudentModel user2 = studentMapper.selectById(1L);
-        user2.setName("kwhua222");
+        user2.setName("abc222");
         user2.setEmail("123456@qq.com");
         studentMapper.updateById(user2);
 
