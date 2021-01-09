@@ -1,2 +1,2 @@
 # mybatis-plus-learning
-mybatis-plush 学习笔记
+mybatis-plus 学习笔记
